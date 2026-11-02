@@ -78,7 +78,55 @@ $('#tbOn')?.addEventListener('click', () => setThermal(true));
 $('#tbOff')?.addEventListener('click', () => setThermal(false));
 
 /* ---------- quote form (not wired to a backend yet) ---------- */
-$('#rfq').addEventListener('submit', (e) => { e.preventDefault(); $('#ok').hidden = false; });
+/* ---------- quote / catalog requests -> company inbox (FormSubmit) ----------
+   The first request ever sent triggers a one-time activation email to this
+   inbox; click "Activate" in it and every request after that arrives. */
+const LEADS_INBOX = 'info@easternextrusion.com';
+const MSG = {
+  en: { sending: 'Sending…', okQuote: 'Thanks. Your request is with our sales team, and we will reply within one working day.',
+        okCatalog: 'Thanks. We will email you our catalog and company profile shortly.',
+        need: 'Please add your name and an email or phone number so we can reply.',
+        fail: 'We could not send this right now. Please email info@easternextrusion.com or message us on WhatsApp.' },
+  ar: { sending: 'جارٍ الإرسال…', okQuote: 'شكرًا. وصل طلبك إلى فريق المبيعات وسنرد خلال يوم عمل.',
+        okCatalog: 'شكرًا. سنرسل لك الكتالوج وملف الشركة على بريدك قريبًا.',
+        need: 'من فضلك أضف اسمك وبريدك أو رقم هاتفك لنتمكن من الرد.',
+        fail: 'تعذّر الإرسال الآن. راسلنا على info@easternextrusion.com أو عبر واتساب.' },
+};
+const rfq = $('#rfq'), ok = $('#ok'), rfqBtn = $('#rfqBtn');
+const say = (key, bad = false) => { ok.hidden = false; ok.classList.toggle('bad', bad); ok.textContent = MSG[lang === 'ar' ? 'ar' : 'en'][key]; };
+function setKind(kind) {
+  const r = rfq.querySelector(`input[name=kind][value=${kind}]`); if (r) r.checked = true;
+  if (kind === 'catalog') $('#q-type').selectedIndex = 1;
+}
+rfq.addEventListener('change', (e) => { if (e.target.name === 'kind') setKind(e.target.value); });
+$$('[data-kind]').forEach((a) => a.addEventListener('click', () => setKind(a.dataset.kind)));
+rfq.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const d = Object.fromEntries(new FormData(rfq));
+  if (d._honey) return;                                   // bot filled the hidden field
+  if (!d.name.trim() || !(d.email.trim() || d.phone.trim())) return say('need', true);
+  const catalog = d.kind === 'catalog';
+  const payload = {
+    _subject: `${catalog ? 'Catalog request' : 'Quote request'} · ${d.name}${d.company ? ' · ' + d.company : ''}`,
+    _template: 'table', _captcha: 'false',
+    ...(d.email ? { _replyto: d.email } : {}),
+    'Request type': catalog ? 'Catalog / company profile' : 'Quote',
+    Name: d.name, Company: d.company, Email: d.email, 'Phone / WhatsApp': d.phone,
+    Product: $('#q-type').selectedOptions[0].textContent, 'Quantity (tons)': d.quantity, Details: d.message,
+    'Site language': lang, Page: location.href,
+  };
+  rfqBtn.disabled = true; say('sending');
+  try {
+    const res = await fetch(`https://formsubmit.co/ajax/${LEADS_INBOX}`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload),
+    });
+    const out = await res.json().catch(() => ({}));
+    if (!res.ok || String(out.success) === 'false') throw new Error(out.message || res.status);
+    say(catalog ? 'okCatalog' : 'okQuote'); rfq.reset(); setKind('quote');
+  } catch (err) {
+    console.warn('Request not sent:', err); say('fail', true);
+  } finally { rfqBtn.disabled = false; }
+});
 
 /* ---------- nav: solid after scroll, hide when scrolling down ---------- */
 const nav = $('#nav');

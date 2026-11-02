@@ -155,6 +155,7 @@
     <li><span class="label" data-i18n="sp3">Weight</span><b>0.25 – 6 kg/m</b></li>
     <li><span class="label" data-i18n="sp4">Length</span><b data-i18n="sp4v">12 m mill · 7 m coated</b></li>
   </ul>
+  <div class="cat-cta"><a class="btn solid" href="#quote" data-kind="catalog"><span data-i18n="k2">Request the catalog</span><span class="dot"></span></a></div>
 </div></section>
 <div class="peek" id="peek" aria-hidden="true"><img src="/img/plant/p1-finishes-display.jpg" alt=""><img src="/img/plant/p1-runout-02.jpg" alt=""><img src="/img/plant/p2-thermal-break-01.jpg" alt=""><img src="/img/plant/p2-coating-02.jpg" alt=""><img src="/img/plant/p2-die-shop-01.jpg" alt=""></div>
 
@@ -267,15 +268,20 @@
     </div>
   </div>
   <form id="rfq" novalidate>
-    <div class="f"><label for="q-name" data-i18n="fn">Name</label><input id="q-name" name="name" autocomplete="name"></div>
+    <div class="f full kind" role="radiogroup" aria-label="Request type">
+      <label class="pill"><input type="radio" name="kind" value="quote" checked><span data-i18n="k1">Request a quote</span></label>
+      <label class="pill"><input type="radio" name="kind" value="catalog"><span data-i18n="k2">Request the catalog</span></label>
+    </div>
+    <div class="f"><label for="q-name" data-i18n="fn">Name</label><input id="q-name" name="name" autocomplete="name" required></div>
     <div class="f"><label for="q-co" data-i18n="fc">Company</label><input id="q-co" name="company" autocomplete="organization"></div>
     <div class="f"><label for="q-mail" data-i18n="fe">Email</label><input id="q-mail" name="email" type="email" autocomplete="email"></div>
     <div class="f"><label for="q-tel" data-i18n="ft">Phone / WhatsApp</label><input id="q-tel" name="phone" type="tel" autocomplete="tel"></div>
-    <div class="f"><label for="q-type" data-i18n="fp">Product</label><select id="q-type" name="product"><option data-i18n="o1">Architectural profiles</option><option data-i18n="o5">Industrial profiles</option><option data-i18n="o2">Thermal break</option><option data-i18n="o3">Powder coating</option><option data-i18n="o4">Custom die</option></select></div>
+    <div class="f"><label for="q-type" data-i18n="fp">Product</label><select id="q-type" name="product"><option data-i18n="o1">Architectural profiles</option><option data-i18n="o7">Full catalog / company profile</option><option data-i18n="o5">Industrial profiles</option><option data-i18n="o2">Thermal break</option><option data-i18n="o3">Powder coating</option><option data-i18n="o4">Custom die</option></select></div>
     <div class="f"><label for="q-qty" data-i18n="fq">Quantity (tons)</label><input id="q-qty" name="quantity" inputmode="decimal"></div>
     <div class="f full"><label for="q-msg" data-i18n="fm">Section, alloy, finish</label><textarea id="q-msg" name="message"></textarea></div>
-    <div class="f full"><button class="btn solid" type="submit" style="align-self:flex-start"><span data-i18n="fs">Send request</span><span class="dot"></span></button></div>
-    <div class="ok" id="ok" hidden data-i18n="fo">Preview only: this form is not connected yet. On the live site it goes to the sales mailbox.</div>
+    <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="f full"><button class="btn solid" id="rfqBtn" type="submit" style="align-self:flex-start"><span data-i18n="fs">Send request</span><span class="dot"></span></button></div>
+    <div class="ok" id="ok" hidden role="status" aria-live="polite"></div>
   </form>
 </div></section>
 </main>

@@ -522,3 +522,17 @@ footer .big{font-stretch:75%!important;font-size:clamp(120px,32vw,560px)}
 .prow h3{font-size:clamp(38px,5vw,86px)!important}
 .prow{grid-template-columns:70px minmax(0,1.15fr) minmax(0,1fr) 60px}
 @media (max-width:900px){.prow{grid-template-columns:minmax(0,1fr) 54px}}
+
+/* request form: type switch, honeypot, status */
+.kind{flex-direction:row!important;flex-wrap:wrap;gap:10px!important}
+.pill{position:relative;cursor:pointer}
+.pill input{position:absolute;opacity:0;pointer-events:none}
+.pill span{display:inline-block;padding:10px 20px;border:1px solid var(--line);border-radius:999px;font:700 13px var(--f-body);font-stretch:75%;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--muted);transition:background .25s,color .25s,border-color .25s}
+.pill input:checked+span{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.pill input:focus-visible+span{outline:2px solid var(--accent);outline-offset:3px}
+html[dir=rtl] .pill span{letter-spacing:0;font-family:'IBM Plex Sans Arabic',var(--f-body)}
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+.ok.bad{border-inline-start-color:#E0705C}
+#rfqBtn[disabled]{opacity:.6;cursor:progress}
+.cat-cta{display:flex;justify-content:center;margin-top:50px}
