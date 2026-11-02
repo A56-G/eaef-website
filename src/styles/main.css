@@ -261,3 +261,18 @@ html[dir=rtl] .timeline li{padding:12px 22px 12px 0}
 
 /* Arabic: mono face + tracking breaks letter joining */
 html[dir=rtl] .label,html[dir=rtl] .facts b,html[dir=rtl] .specs b,html[dir=rtl] .seg button,html[dir=rtl] .f label,html[dir=rtl] details summary,html[dir=rtl] .badge{font-family:'IBM Plex Sans Arabic',var(--f-mono);letter-spacing:0}
+
+/* real photos in plant cards and certificates */
+.plant .pph{margin:-30px -30px 6px;aspect-ratio:16/9;overflow:hidden;border-radius:8px 8px 0 0}
+.plant .pph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.plant:hover .pph img{transform:scale(1.04)}
+.certs{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+a.cert{text-decoration:none;transition:border-color .3s,transform .3s}
+a.cert:hover{border-color:var(--accent);transform:translateY(-3px)}
+.cert .cimg{display:block;aspect-ratio:1/1.41;overflow:hidden;border-radius:3px;background:#fff;margin-bottom:10px}
+.cert .cimg img{width:100%;height:100%;object-fit:cover;object-position:top}
+.cert b{font-size:18px}
+#pImg{object-position:center 40%}
+.plant .facts b{white-space:normal;text-align:end}
+.prow>*{min-width:0}
+@media (max-width:900px){.prow{grid-template-columns:minmax(0,1fr) 54px}.prow h3{overflow-wrap:anywhere}}
