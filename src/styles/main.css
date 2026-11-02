@@ -375,3 +375,150 @@ html[dir=rtl] .hx-feat h2 span,html[dir=rtl] .hx-feat p span{letter-spacing:0!im
 }
 /* video blocked or failed: the plant photo poster is brighter, so deepen the tint */
 .hx.no-video .hx-tint{background:linear-gradient(180deg,rgba(9,11,28,.72) 0%,rgba(9,11,28,.45) 45%,rgba(9,11,28,.7) 75%,rgba(9,11,28,.9) 100%)}
+
+/* =====================================================================
+   HERO LANGUAGE, SITE-WIDE
+   Near-black ground, cream type, heavy condensed caps centered on one
+   vertical axis, wide-tracked eyebrows, mirrored blocks either side.
+   ===================================================================== */
+:root{
+  --bg:#0a0b0c; --bg-2:#121316; --ink:#F7F5EF; --muted:rgba(247,245,239,.62);
+  --line:rgba(247,245,239,.12); --accent:#8C93FF; --accent-hi:#A9AEFF; --accent-ink:#0a0b0c;
+}
+html,body{background:var(--bg)}
+.disp,h1,h2,h3{font-stretch:75%;letter-spacing:-.005em;line-height:.9}
+.nav.solid{background:rgba(10,11,12,.82)}
+
+/* eyebrow: the hero's small wide-tracked caps */
+.eyebrow{display:block;font:700 12px/1.2 var(--f-body);font-stretch:75%;letter-spacing:.3em;text-indent:.3em;
+  text-transform:uppercase;color:var(--ink);opacity:.92}
+.eyebrow b{color:var(--accent);font-weight:700}
+html[dir=rtl] .eyebrow{font-family:'IBM Plex Sans Arabic',var(--f-body);letter-spacing:0;text-indent:0;font-size:13px}
+
+/* section heads sit on the page axis */
+.sec-head{display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px;margin:0 auto 70px;max-width:1100px}
+.sec-head h2{font-size:clamp(56px,9.4vw,156px)!important;color:var(--ink);text-shadow:0 15px 36px rgba(0,0,0,.45)}
+.sec-head h2::after{content:"";display:block;width:52px;height:2px;background:var(--accent);margin:30px auto 0}
+.sec-head .lead{color:var(--muted);max-width:52ch;margin:0;font-size:18px}
+.head.sec-head,.tour-head.sec-head{justify-content:center}
+.products .head{margin-bottom:60px}
+.tour-head p{max-width:46ch;color:var(--muted);text-align:center;margin:0}
+.tour-head h2{font-size:clamp(56px,9.4vw,156px)}
+
+/* statement: one centered block */
+.statement{padding-block:150px 100px;text-align:center}
+.statement .eyebrow{margin-bottom:34px}
+.statement p{font-family:var(--f-display)!important;font-weight:800;font-stretch:75%;text-transform:uppercase;
+  font-size:clamp(34px,5.4vw,84px);line-height:.98;letter-spacing:-.005em;max-width:20ch;margin-inline:auto}
+html[dir=rtl] .statement p{text-transform:none;font-size:clamp(28px,3.8vw,56px)}
+
+/* stats: four columns, condensed numerals */
+.stats .wrap{text-align:center}
+.stat{padding:50px 20px 44px!important}
+.stat .n{font-stretch:75%!important;font-size:clamp(70px,8.4vw,140px)!important;color:var(--ink)}
+.stat .n small{color:var(--accent)}
+.stat .label{font:700 12px var(--f-body);font-stretch:75%;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+
+/* plants: two full-height photos meeting on the axis, copy facing inward */
+.plants{padding-block:130px 0}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:0;position:relative;max-width:none}
+.plant{position:relative;min-height:min(92vh,880px);overflow:hidden;display:flex;align-items:flex-end;background:#000}
+.plant .pbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.plant:hover .pbg{transform:scale(1.04)}
+.plant::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,11,12,.35) 0%,rgba(10,11,12,.15) 35%,rgba(10,11,12,.85) 78%,rgba(10,11,12,.96) 100%)}
+.pcopy{position:relative;z-index:1;width:100%;padding:0 clamp(24px,4.4vw,72px) clamp(40px,6vh,72px);display:flex;flex-direction:column;gap:14px}
+.p-left .pcopy{align-items:flex-end;text-align:right}
+.p-right .pcopy{align-items:flex-start;text-align:left}
+html[dir=rtl] .p-left .pcopy{align-items:flex-end;text-align:left}
+html[dir=rtl] .p-right .pcopy{align-items:flex-start;text-align:right}
+.plant h3{font-size:clamp(38px,4.6vw,76px);color:var(--ink);text-shadow:0 10px 30px rgba(0,0,0,.5)}
+.plant .area{margin:0;font:700 14px var(--f-body);font-stretch:75%;letter-spacing:.2em;color:var(--muted)}
+.plant .area .n2{font:800 clamp(56px,6.4vw,110px)/.9 var(--f-display);font-stretch:75%;letter-spacing:0;color:var(--accent)}
+.pfacts{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+.pfacts li{display:flex;gap:14px;align-items:baseline}
+.p-left .pfacts li{flex-direction:row-reverse}
+html[dir=rtl] .p-left .pfacts li{flex-direction:row-reverse}
+html[dir=rtl] .p-right .pfacts li{flex-direction:row}
+.pfacts span{font:700 11px var(--f-body);font-stretch:75%;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.pfacts b{font:600 17px var(--f-body);font-stretch:85%;color:var(--ink)}
+.plant .addr{margin:6px 0 0;color:var(--muted);font-size:13px}
+.pgrid .axis-mark{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;z-index:2;color:var(--accent);
+  filter:drop-shadow(0 4px 14px rgba(0,0,0,.6))}
+.pgrid::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(247,245,239,.22);z-index:2}
+
+/* tour + products in the same voice */
+.stage h3{font-size:clamp(28px,2.8vw,44px)}
+.stage .ph .no{background:var(--accent);color:var(--accent-ink);font-family:var(--f-body);font-stretch:75%;font-weight:800}
+.prow h3{font-size:clamp(40px,6vw,104px)!important}
+.prow .k{font:700 13px var(--f-body);font-stretch:75%;letter-spacing:.2em}
+.specs b{font:700 20px var(--f-body);font-stretch:75%;letter-spacing:.02em}
+.specs .label{font:700 11px var(--f-body);font-stretch:75%;letter-spacing:.26em;text-transform:uppercase}
+
+/* thermal: facts mirrored around the cutaway */
+.thermal{padding-block:140px;background:var(--bg)}
+.tgrid{display:grid;grid-template-columns:1fr minmax(260px,440px) 1fr;gap:clamp(24px,4vw,64px);align-items:center}
+.tfig{margin:0;display:flex;flex-direction:column;align-items:center;gap:18px}
+.tfig img{width:100%;max-width:440px;aspect-ratio:244/206;object-fit:contain;background:#EEF0F6;border-radius:10px;padding:22px;
+  box-shadow:0 40px 80px -30px rgba(140,147,255,.35),0 0 0 1px rgba(140,147,255,.25)}
+.tfig figcaption{color:var(--muted);font-size:11px}
+.tfacts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:46px}
+.t-left{text-align:right}
+.t-right{text-align:left}
+html[dir=rtl] .t-left{text-align:left}
+html[dir=rtl] .t-right{text-align:right}
+.tfacts b{display:block;font:800 clamp(44px,5vw,84px)/.9 var(--f-display);font-stretch:75%;color:var(--ink)}
+.tfacts li:first-child b{color:var(--accent)}
+.tfacts span{display:block;margin-top:10px;font:700 12px var(--f-body);font-stretch:75%;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+html[dir=rtl] .tfacts span{letter-spacing:0;font-family:'IBM Plex Sans Arabic',var(--f-body)}
+
+/* people band: centered axis like the hero */
+.people .copy{text-align:center;bottom:auto;top:50%;transform:translateY(-50%)}
+.people .copy .wrap{display:flex;flex-direction:column;align-items:center;gap:24px}
+.people h2{font-size:clamp(52px,8.6vw,150px)!important;max-width:13ch;margin:0 auto;text-shadow:0 15px 36px rgba(0,0,0,.55)}
+.people .axis-mark{width:56px;height:56px;color:var(--accent);margin-top:20px}
+.people::after{background:linear-gradient(180deg,rgba(10,11,12,.55),rgba(10,11,12,.35) 45%,rgba(10,11,12,.8))}
+
+/* quality, news, quote, footer */
+.quality{padding-block:140px 40px}
+.quality .sec-head h2{margin:0}
+.cert b{font-stretch:75%;font-size:20px;color:var(--ink)}
+a.cert:hover b{color:var(--accent)}
+.news h2{font-size:inherit}
+.news .sec-head{margin-bottom:60px}
+.feat-tx h3{font-stretch:75%!important;font-size:clamp(34px,3.8vw,62px)}
+.post h3{font-stretch:75%!important;font-size:clamp(26px,2.4vw,36px)}
+.marq span{font-stretch:75%!important;font-size:clamp(64px,10vw,170px)}
+.quote h2{font-stretch:75%!important;font-size:clamp(52px,6.4vw,104px)!important}
+footer .big{font-stretch:75%!important;font-size:clamp(120px,32vw,560px)}
+.btn{font-stretch:85%}
+
+@media (max-width:900px){
+  .pgrid{grid-template-columns:1fr}
+  .pgrid::before,.pgrid .axis-mark{display:none}
+  .plant{min-height:78vh}
+  .p-left .pcopy{align-items:flex-end;text-align:right}
+  .p-right .pcopy{align-items:flex-start;text-align:left}
+  html[dir=rtl] .p-left .pcopy,html[dir=rtl] .p-right .pcopy{align-items:flex-start;text-align:right}
+  html[dir=rtl] .pfacts li{flex-direction:row!important}
+  .tgrid{grid-template-columns:1fr 1fr;grid-template-areas:"fig fig" "l r"}
+  .tfig{grid-area:fig}.t-left{grid-area:l}.t-right{grid-area:r}
+  .tfacts{gap:30px}
+  .sec-head{margin-bottom:50px}
+  .statement{padding-block:110px 70px}
+}
+@media (max-width:520px){
+  .stats .wrap{grid-template-columns:1fr 1fr}
+  .stat{border-bottom:1px solid var(--line)}
+  .stat .n{font-size:clamp(56px,17vw,80px)!important}
+}
+.plants .plant{flex-direction:row;align-items:flex-end;padding:0;border:0;border-radius:0;gap:0}
+.tfig img{background:#fff}
+@media (max-width:900px){
+  .tgrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .tfacts b{font-size:clamp(34px,10vw,60px)}
+  .tfacts span{letter-spacing:.14em}
+}
+.products .head.sec-head,.tour .tour-head.sec-head{flex-direction:column;align-items:center;justify-content:center;text-align:center;flex-wrap:nowrap}
+.prow h3{font-size:clamp(38px,5vw,86px)!important}
+.prow{grid-template-columns:70px minmax(0,1.15fr) minmax(0,1fr) 60px}
+@media (max-width:900px){.prow{grid-template-columns:minmax(0,1fr) 54px}}
