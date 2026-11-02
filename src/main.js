@@ -17,6 +17,13 @@ yrs.textContent = new Date().getFullYear() - FOUNDED;
 yrs.dataset.count = yrs.textContent;
 $('#cy').textContent = new Date().getFullYear();
 
+/* ---------- hero video: fall back to the photo poster with a deeper tint ---------- */
+const heroVid = $('#heroVid');
+const noVideo = () => $('#hero').classList.add('no-video');
+heroVid.addEventListener('error', noVideo);
+setTimeout(() => { if (heroVid.readyState < 2) noVideo(); }, 4000);
+heroVid.addEventListener('playing', () => $('#hero').classList.remove('no-video'));
+
 /* ---------- i18n ---------- */
 const nodes = $$('[data-i18n]');
 const EN = {};
@@ -119,18 +126,11 @@ function initMotion() {
     if (id.length > 1 && $(id)) { e.preventDefault(); lenis.scrollTo(id, { offset: -10 }); }
   }));
 
-  /* hero intro */
-  gsap.fromTo('#heroImg', { scale: 1.3 }, { scale: 1.12, duration: 2.2, ease: 'power3.out' });
-  gsap.from('#h1 .l>span', { yPercent: 105, duration: 1.2, ease: 'power4.out', stagger: 0.1, delay: 0.2 });
-  gsap.from('.hero .under>*,.hero .top-l', { y: 30, opacity: 0, duration: 1, ease: 'power3.out', stagger: 0.1, delay: 0.7 });
-
-  /* hero scroll: photo shrinks into a frame */
+  /* hero: CSS runs the one-shot entrance; on scroll the video frame shrinks and the copy lifts away */
   gsap.set('#heroFrame', { clipPath: 'inset(0% 0% 0% 0% round 0px)' });
-  gsap.timeline({ scrollTrigger: { trigger: '#hero', start: 'top top', end: '+=90%', scrub: true, pin: true } })
-    .to('#heroFrame', { clipPath: 'inset(9% 5% 9% 5% round 14px)', ease: 'none' }, 0)
-    .to('#heroImg', { scale: 1, ease: 'none' }, 0)
-    .to('.hero .copy', { yPercent: -30, opacity: 0, ease: 'none', duration: 0.35 }, 0)
-    .to('.hero .top-l', { opacity: 0, ease: 'none', duration: 0.2 }, 0);
+  gsap.timeline({ scrollTrigger: { trigger: '#hero', start: 'top top', end: '+=80%', scrub: true, pin: true } })
+    .to('#heroFrame', { clipPath: 'inset(8% 5% 8% 5% round 14px)', ease: 'none' }, 0)
+    .to('#heroStage', { opacity: 0, y: -40, ease: 'none', duration: 0.4 }, 0);
 
   /* counters */
   $$('[data-count]').forEach((el) => {
