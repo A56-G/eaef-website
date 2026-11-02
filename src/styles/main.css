@@ -532,7 +532,12 @@ footer .big{font-stretch:75%!important;font-size:clamp(120px,32vw,560px)}
 .pill input:checked+span{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .pill input:focus-visible+span{outline:2px solid var(--accent);outline-offset:3px}
 html[dir=rtl] .pill span{letter-spacing:0;font-family:'IBM Plex Sans Arabic',var(--f-body)}
-.hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+.hp{position:absolute!important;width:1px;height:1px;padding:0;border:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;opacity:0}
 .ok.bad{border-inline-start-color:#E0705C}
 #rfqBtn[disabled]{opacity:.6;cursor:progress}
 .cat-cta{display:flex;justify-content:center;margin-top:50px}
+.tfacts b small{display:block;margin-bottom:6px;font:700 12px var(--f-body);font-stretch:75%;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+html[dir=rtl] .tfacts b small{letter-spacing:0;font-family:'IBM Plex Sans Arabic',var(--f-body);font-size:14px}
+.tsec{display:block;width:100%;max-width:460px;height:auto;border-radius:10px;
+  box-shadow:0 40px 80px -30px rgba(140,147,255,.35),0 0 0 1px rgba(140,147,255,.25)}
+html[dir=rtl] .tsec text{letter-spacing:0;font-family:'IBM Plex Sans Arabic',system-ui,sans-serif}
