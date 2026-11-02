@@ -158,7 +158,7 @@ function initMotion() {
   }));
 
   /* reveals */
-  $$('.products h2,.thermal h2,.news h2,.tour-head h2').forEach((h) =>
+  $$('.products h2,.thermal h2,.news h2,.tour-head h2,.plants h2,.quality h2').forEach((h) =>
     gsap.from(h, { yPercent: 40, opacity: 0, duration: 1.1, ease: 'power4.out', scrollTrigger: { trigger: h, start: 'top 88%' } }));
   gsap.from('.prow', { y: 40, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: 0.08, scrollTrigger: { trigger: '#plist', start: 'top 85%' } });
   gsap.from('.post', { y: 40, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: 0.1, scrollTrigger: { trigger: '.ngrid', start: 'top 88%' } });
