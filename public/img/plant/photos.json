@@ -1,0 +1,240 @@
+[
+  {
+    "file": "p1-hall-01.jpg",
+    "plant": "p1",
+    "subject": "hall",
+    "alt_en": "Main extrusion hall at Plant 1 with overhead crane and billet stock",
+    "alt_ar": "صالة البثق الرئيسية في المصنع الأول مع الرافعة العلوية ومخزون البليت"
+  },
+  {
+    "file": "p1-billets-01.jpg",
+    "plant": "p1",
+    "subject": "billets",
+    "alt_en": "Stack of aluminium billets ready for extrusion at Plant 1",
+    "alt_ar": "رصّة من بليت الألمنيوم جاهزة للبثق في المصنع الأول"
+  },
+  {
+    "file": "p1-billets-02.jpg",
+    "plant": "p1",
+    "subject": "billets",
+    "alt_en": "Aluminium billets on the press loading table",
+    "alt_ar": "بليت الألمنيوم على طاولة تغذية المكبس"
+  },
+  {
+    "file": "p1-press-8in.jpg",
+    "plant": "p1",
+    "subject": "press",
+    "alt_en": "The 8-inch extrusion press at Plant 1",
+    "alt_ar": "مكبس البثق مقاس 8 بوصة في المصنع الأول"
+  },
+  {
+    "file": "p1-press-control.jpg",
+    "plant": "p1",
+    "subject": "people",
+    "alt_en": "Operators running the extrusion press from the control desk",
+    "alt_ar": "مشغلون يديرون مكبس البثق من لوحة التحكم"
+  },
+  {
+    "file": "p1-runout-01.jpg",
+    "plant": "p1",
+    "subject": "runout",
+    "alt_en": "Tecalex puller and runout table at Plant 1",
+    "alt_ar": "الساحب ونظام الطاولة الخارجة من Tecalex في المصنع الأول"
+  },
+  {
+    "file": "p1-runout-02.jpg",
+    "plant": "p1",
+    "subject": "runout",
+    "alt_en": "Freshly extruded profiles on the runout table",
+    "alt_ar": "قطاعات مبثوقة حديثاً على طاولة الخروج"
+  },
+  {
+    "file": "p1-quality-01.jpg",
+    "plant": "p1",
+    "subject": "quality",
+    "alt_en": "Inspector measuring an extruded profile with a caliper",
+    "alt_ar": "مراقب جودة يقيس قطاعاً مبثوقاً بالقدمة"
+  },
+  {
+    "file": "p1-lab-01.jpg",
+    "plant": "p1",
+    "subject": "quality",
+    "alt_en": "Chemical titration in the pre-treatment laboratory",
+    "alt_ar": "معايرة كيميائية في مختبر المعالجة المسبقة"
+  },
+  {
+    "file": "p1-pretreatment-01.jpg",
+    "plant": "p1",
+    "subject": "coating",
+    "alt_en": "Pre-treatment tanks of the horizontal powder coating line at Plant 1",
+    "alt_ar": "أحواض المعالجة المسبقة لخط الطلاء بالبودرة الأفقي في المصنع الأول"
+  },
+  {
+    "file": "p1-coating-racking.jpg",
+    "plant": "p1",
+    "subject": "people",
+    "alt_en": "Workers preparing profiles for the horizontal powder coating line at Plant 1",
+    "alt_ar": "عمال يجهّزون القطاعات لخط الطلاء بالبودرة الأفقي في المصنع الأول"
+  },
+  {
+    "file": "p1-coating-01.jpg",
+    "plant": "p1",
+    "subject": "coating",
+    "alt_en": "Profiles on the horizontal powder coating line at Plant 1",
+    "alt_ar": "قطاعات على خط الطلاء بالبودرة الأفقي في المصنع الأول"
+  },
+  {
+    "file": "p1-die-shop-01.jpg",
+    "plant": "p1",
+    "subject": "die-shop",
+    "alt_en": "Technician correcting an extrusion die in the die shop",
+    "alt_ar": "فني يصحح قالب بثق في ورشة القوالب"
+  },
+  {
+    "file": "p1-finishes-display.jpg",
+    "plant": "p1",
+    "subject": "products",
+    "alt_en": "Display of finished profiles and colour samples",
+    "alt_ar": "عرض لقطاعات منتهية وعينات ألوان"
+  },
+  {
+    "file": "p1-packed-01.jpg",
+    "plant": "p1",
+    "subject": "warehouse",
+    "alt_en": "Packed and wrapped profiles ready for dispatch",
+    "alt_ar": "قطاعات مغلفة ومعبأة جاهزة للشحن"
+  },
+  {
+    "file": "p1-warehouse-01.jpg",
+    "plant": "p1",
+    "subject": "warehouse",
+    "alt_en": "Finished goods warehouse at Plant 1",
+    "alt_ar": "مستودع المنتجات النهائية في المصنع الأول"
+  },
+  {
+    "file": "p2-building-01.jpg",
+    "plant": "p2",
+    "subject": "building",
+    "alt_en": "Plant 2 building in Dammam 3rd Industrial City",
+    "alt_ar": "مبنى المصنع الثاني في المدينة الصناعية الثالثة بالدمام"
+  },
+  {
+    "file": "p2-hall-01.jpg",
+    "plant": "p2",
+    "subject": "hall",
+    "alt_en": "Elevated view of the Plant 2 extrusion hall",
+    "alt_ar": "منظر علوي لصالة البثق في المصنع الثاني"
+  },
+  {
+    "file": "p2-hall-02.jpg",
+    "plant": "p2",
+    "subject": "hall",
+    "alt_en": "Long view down the Plant 2 production hall",
+    "alt_ar": "منظر ممتد لصالة الإنتاج في المصنع الثاني"
+  },
+  {
+    "file": "p2-press-01.jpg",
+    "plant": "p2",
+    "subject": "press",
+    "alt_en": "Tecalex extrusion line at Plant 2",
+    "alt_ar": "خط البثق Tecalex في المصنع الثاني"
+  },
+  {
+    "file": "p2-press-02.jpg",
+    "plant": "p2",
+    "subject": "press",
+    "alt_en": "Extrusion press container and billet loader at Plant 2",
+    "alt_ar": "حاوية مكبس البثق ومغذي البليت في المصنع الثاني"
+  },
+  {
+    "file": "p2-press-control.jpg",
+    "plant": "p2",
+    "subject": "people",
+    "alt_en": "Press operator at the control console",
+    "alt_ar": "مشغل المكبس عند لوحة التحكم"
+  },
+  {
+    "file": "p2-saw-01.jpg",
+    "plant": "p2",
+    "subject": "runout",
+    "alt_en": "Profiles leaving the Tecalex saw on the runout",
+    "alt_ar": "قطاعات تخرج من منشار Tecalex على طاولة الخروج"
+  },
+  {
+    "file": "p2-handling-turla.jpg",
+    "plant": "p2",
+    "subject": "runout",
+    "alt_en": "Turla automated profile handling system",
+    "alt_ar": "نظام مناولة القطاعات الآلي Turla"
+  },
+  {
+    "file": "p2-billets-01.jpg",
+    "plant": "p2",
+    "subject": "billets",
+    "alt_en": "Billet logs on the loading conveyor at Plant 2",
+    "alt_ar": "أعمدة البليت على سير التغذية في المصنع الثاني"
+  },
+  {
+    "file": "p2-billets-02.jpg",
+    "plant": "p2",
+    "subject": "billets",
+    "alt_en": "Billet stock in Plant 2",
+    "alt_ar": "مخزون البليت في المصنع الثاني"
+  },
+  {
+    "file": "p2-coating-01.jpg",
+    "plant": "p2",
+    "subject": "coating",
+    "alt_en": "Vertical powder coating line with hanging profiles at Plant 2",
+    "alt_ar": "خط الطلاء بالبودرة العمودي مع القطاعات المعلقة في المصنع الثاني"
+  },
+  {
+    "file": "p2-coating-02.jpg",
+    "plant": "p2",
+    "subject": "coating",
+    "alt_en": "Loading profiles onto the vertical powder coating line at Plant 2",
+    "alt_ar": "تحميل القطاعات على خط الطلاء بالبودرة العمودي في المصنع الثاني"
+  },
+  {
+    "file": "p2-thermal-break-01.jpg",
+    "plant": "p2",
+    "subject": "thermal-break",
+    "alt_en": "Operator on the thermal break knurling and crimping line at Plant 2",
+    "alt_ar": "مشغل على خط تخريش وكبس العوازل الحرارية في المصنع الثاني"
+  },
+  {
+    "file": "p2-packing-01.jpg",
+    "plant": "p2",
+    "subject": "packing",
+    "alt_en": "Wrapping profiles on the packing line",
+    "alt_ar": "تغليف القطاعات على خط التعبئة"
+  },
+  {
+    "file": "p2-packed-01.jpg",
+    "plant": "p2",
+    "subject": "warehouse",
+    "alt_en": "Wrapped profile bundles in the Plant 2 warehouse",
+    "alt_ar": "حزم قطاعات مغلفة في مستودع المصنع الثاني"
+  },
+  {
+    "file": "p2-lab-01.jpg",
+    "plant": "p2",
+    "subject": "quality",
+    "alt_en": "Coating impact test in the quality laboratory",
+    "alt_ar": "اختبار الصدم للطلاء في مختبر الجودة"
+  },
+  {
+    "file": "p2-die-shop-01.jpg",
+    "plant": "p2",
+    "subject": "die-shop",
+    "alt_en": "Polishing an extrusion die in the Plant 2 die shop",
+    "alt_ar": "تلميع قالب بثق في ورشة القوالب بالمصنع الثاني"
+  },
+  {
+    "file": "p2-team-01.jpg",
+    "plant": "p2",
+    "subject": "people",
+    "alt_en": "Plant 2 production team",
+    "alt_ar": "فريق الإنتاج في المصنع الثاني"
+  }
+]
